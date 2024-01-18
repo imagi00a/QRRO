@@ -1,0 +1,328 @@
+@charset "UTF-8";
+*{
+	margin: 0;
+	padding:0;
+}
+
+
+/* 화면 전체 렙 */
+.wrapper {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* content 랩 */
+.wrap {
+    width: 100%;
+    max-width: 500px; /* 너비 조정 */
+    background-color: #fff; /* 흰색 배경 */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px; /* 내부 패딩 추가 */
+}
+/* 페이지 제목 */
+.subjecet{
+	width: 100%;
+    height: 100px;
+    background-color: #333;
+}
+.subjecet span{
+	margin-left: 31px;
+    font-size: 60px;
+    font-weight: 900;
+    color: white;
+}
+
+/* 아이디 영역 */
+.id_wrap{
+	width: 100%;
+    margin-top: 20px;
+}
+.id_name{
+	font-size: 25px;
+    font-weight: bold;
+}
+.id_input_box{
+	border: 1px solid black;
+	height:31px;
+	padding: 10px 14px;	
+	
+}
+.id_input{
+	width:100%;
+	height:100%;
+	border:none;
+	font-size:28px;
+}
+	/* 중복아이디 존재하지 않는경우 */
+	.id_input_re_1{
+		color : green;
+		display : none;
+	}
+	/* 중복아이디 존재하는 경우 */
+	.id_input_re_2{
+		color : red;
+		display : none;
+	}
+/* 비밀번호 영역 */
+.pw_wrap{
+	width: 100%;
+    margin-top: 20px;
+}
+.pw_name{
+	font-size: 25px;
+    font-weight: bold;
+}
+.pw_input_box{
+	border: 1px solid black;
+	height:31px;
+	padding: 10px 14px;	
+	
+}
+.pw_input{
+	width:100%;
+	height:100%;
+	border:none;
+	font-size:28px;
+}
+
+/* 비밀번호 확인 영역 */
+.pwck_wrap{
+	width: 100%;
+    margin-top: 20px;
+}
+.pwck_name{
+	font-size: 25px;
+    font-weight: bold;
+}
+.pwck_input_box{
+	border: 1px solid black;
+	height:31px;
+	padding: 10px 14px;	
+	
+}
+.pwck_input{
+	width:100%;
+	height:100%;
+	border:none;
+	font-size:28px;
+}
+
+/* 업장명 영역 */
+.store_wrap{
+	width: 100%;
+    margin-top: 20px;
+}
+.store_name{
+	font-size: 25px;
+    font-weight: bold;
+}
+.store_input_box{
+	border: 1px solid black;
+	height:31px;
+	padding: 10px 14px;	
+	
+}
+.store_input{
+	width:100%;
+	height:100%;
+	border:none;
+	font-size:28px;
+}
+
+
+/* 주소 영역 */
+.address_wrap{
+	width: 100%;
+    margin-top: 20px;
+}
+.address_name{
+	font-size: 25px;
+    font-weight: bold;
+}
+.address_input_1_box{
+	border: 1px solid black;
+    height: 31px;
+    padding: 10px 14px;
+    width: 61%;
+    float: left;	
+}
+.address_input_1{
+	width:100%;
+	height:100%;
+	border:none;
+	font-size:28px;	
+}
+.address_button{
+    border: 1px solid black;
+    height: 51px;
+    width: 30%;
+    float: right;
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    background-color: #ececf7;
+    cursor: pointer;	
+}
+.address_input_2_wrap{
+	margin-top: 20px;
+}
+.address_input_2_box{
+	border: 1px solid black;
+	height:31px;
+	padding: 10px 14px;	
+	
+}
+.address_input_2{
+	width:100%;
+	height:100%;
+	border:none;
+	font-size:28px;
+}
+
+.address_input_3_wrap{
+	margin-top: 20px;
+}
+.address_input_3_box{
+	border: 1px solid black;
+	height:31px;
+	padding: 10px 14px;	
+	
+}
+.address_input_3{
+	width:100%;
+	height:100%;
+	border:none;
+	font-size:28px;
+}
+
+/* 사업자번호 영역 */
+.num_wrap{
+	width: 100%;
+    margin-top: 20px;
+}
+.num_name{
+	font-size: 25px;
+    font-weight: bold;
+}
+.num_input_box{
+	border: 1px solid black;
+	height:31px;
+	padding: 10px 14px;	
+	
+}
+.num_input{
+	width:100%;
+	height:100%;
+	border:none;
+	font-size:28px;
+}
+/* 대표명 영역 */
+.user_wrap{
+	width: 100%;
+    margin-top: 20px;
+}
+.user_name{
+	font-size: 25px;
+    font-weight: bold;
+}
+.user_input_box{
+	border: 1px solid black;
+	height:31px;
+	padding: 10px 14px;	
+	
+}
+.user_input{
+	width:100%;
+	height:100%;
+	border:none;
+	font-size:28px;
+}
+/* 사업장전화번호 영역 */
+.tel_wrap{
+	width: 100%;
+    margin-top: 20px;
+}
+.tel_name{
+	font-size: 25px;
+    font-weight: bold;
+}
+.tel_input_box{
+	border: 1px solid black;
+	height:31px;
+	padding: 10px 14px;	
+	
+}
+.tel_input{
+	width:100%;
+	height:100%;
+	border:none;
+	font-size:28px;
+}
+/* 가입하기 버튼 */
+.join_button_wrap {
+    margin-top: 20px; /* 마진 조정 */
+    text-align: center;
+}
+.join_button {
+    width: 100%; /* 너비 조정 */
+    height: 60px; /* 높이 조정 */
+    background-color: #333; /* 버튼 색상 변경 */
+    font-size: 1.2em; /* 폰트 크기 조정 */
+    font-weight: 900;
+    color: white;
+    border-radius: 5px; /* 둥근 모서리 */
+    margin: auto;
+    border: none; /* 테두리 제거 */
+    cursor: pointer;
+}
+.join_button:hover {
+    background-color: #222; /* 호버 색상 변경 */
+}
+
+/* 유효성 검사 문구 */
+ 
+.final_id_ck{
+    display: none;
+}
+.final_pw_ck{
+    display: none;
+}
+.final_pwck_ck{
+    display: none;
+}
+.final_store_ck{
+    display: none;
+}
+.final_addr_ck{
+    display: none;
+}
+.final_num_ck{
+    display: none;
+}
+.final_user_ck{
+    display: none;
+}
+.final_tel_ck{
+    display: none;
+}
+/* 비밀번호 확인 일치 유효성검사 */
+.pwck_input_re_1{
+        color : green;
+        display : none;    
+}
+.pwck_input_re_2{
+        color : red;
+        display : none;    
+}  
+
+
+/* float 속성 해제 */
+.clearfix{
+	clear: both;
+}
