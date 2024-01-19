@@ -31,9 +31,16 @@ ul{
     right: 0;
     
 }
+/* 로그인 성공 영역 */
+.login_success_area{
+    float : left;
+    padding: 13px 15px 0 10px;
+    font-weight: 900;
+}
+
 .top_gnb_area .list li{
     list-style: none;    
-    float : left;
+    float : right;
     padding: 13px 15px 0 10px;
     font-weight: 900;
     cursor: pointer;
@@ -100,8 +107,6 @@ ul{
     font-size: 50px;
     font-weight: bolder;
 }
- 
- 
  
  
 /* float 속성 해제 */

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,9 +21,14 @@
             <!-- gnv_area -->    
             <div class="top_gnb_area">
                 <ul class="list">    
-                    <li><a href="/main">메인 페이지</a></li>
+                    <!-- 로그인한 상태 -->
+	                <c:if test="${ member != null }">
+	                    <div class="login_success_area">
+	                        <span>업장명 : ${member.storeName}</span>
+	                        <span>아이디 : ${member.memberId}</span>
+	                    </div>
+	                </c:if>           
                     <li><a href="/member/logout.do">로그아웃</a></li>
-                    <li>고객센터</li>            
                 </ul>
             </div>
             <!-- top_subject_area -->

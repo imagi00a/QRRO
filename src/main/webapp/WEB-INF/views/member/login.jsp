@@ -36,7 +36,6 @@
 			<c:if test = "${result == 0 }">
                 <div class = "login_warn">관리자 ID 또는 비밀번호를 잘못 입력하셨습니다.</div>
             </c:if>
-			
 			<div class="login_button_wrap">
 				<input type="button" class="login_button" value="관리자 로그인">
 			</div>	
