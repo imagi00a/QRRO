@@ -17,30 +17,29 @@
 <div class="wrapper">
 	
 	<div class="wrap">
-		<form id="login_form" method="post">
+		<form id="tlogin_form" method="post">
 		<div class="logo_wrap">
 			<span>QRRO</span>
 		</div>
 		<div class="login_wrap"> 
 			<div class="id_wrap">
 					<div class="id_input_box">
-					<input class="id_input" name="memberId">
+					<input class="id_input" name="table_id">
 				</div>
 			</div>
 			<div class="pw_wrap">
 				<div class="pw_input_box">
-					<input class="pw_input" name="memberPw">
+					<input class="pw_input" name="table_pw">
 				</div>
 			</div>
 			
 			<c:if test = "${result == 0 }">
-                <div class = "login_warn">관리자 ID 또는 비밀번호를 잘못 입력하셨습니다.</div>
+                <div class = "login_warn">테이블 ID 또는 비밀번호를 잘못 입력하셨습니다.</div>
             </c:if>
 			
-			<div class="login_button_wrap">
-				<input type="button" class="login_button" value="관리자 로그인">
-			</div>	
-					
+			<div class="tlogin_button_wrap">
+				<input type="button" class="tlogin_button" value="테이블 로그인">
+			</div>			
 		</div>
 		</form>
 		
@@ -50,11 +49,11 @@
 <script>
  
     /* 로그인 버튼 클릭 메서드 */
-    $(".login_button").click(function(){
+    $(".tlogin_button").click(function(){
         
         /* 로그인 메서드 서버 요청 */
-        $("#login_form").attr("action", "/member/login");
-        $("#login_form").submit();
+        $("#tlogin_form").attr("action", "/member/tlogin");
+        $("#tlogin_form").submit();
         
     });
  

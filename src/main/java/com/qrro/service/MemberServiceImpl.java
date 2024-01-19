@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.qrro.mapper.MemberMapper;
 import com.qrro.model.MemberVO;
+import com.qrro.model.TableVO;
 
 @Service
 public class MemberServiceImpl implements MemberService {
@@ -22,6 +23,18 @@ public class MemberServiceImpl implements MemberService {
 	public int idCheck(String memberId) throws Exception {
 		
 		return membermapper.idCheck(memberId);
+	}
+
+	@Override
+	public MemberVO memberLogin(MemberVO member) throws Exception {
+		
+		return membermapper.memberLogin(member);
+	}
+
+	@Override
+	public TableVO tableLogin(TableVO table) throws Exception {
+		
+		return membermapper.tableLogin(table);
 	}
 
 }

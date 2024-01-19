@@ -21,10 +21,13 @@
 			<div class="mid_area">
 				<div class="login_area">
 					<div class="login_button">
-						<a href="/member/login">로그인</a>
+						<a href="/member/tlogin">테이블로그인</a>
 					</div>
 					<div class="login_button">
-						<a href="/member/join">회원가입</a>
+						<a href="/member/login">관리자로그인</a>
+					</div>
+					<div class="login_button">
+						<a href="/member/join">관리자 등록</a>
 					</div>
 				</div>
 			</div>

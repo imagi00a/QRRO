@@ -27,7 +27,7 @@
             </div>
             <!-- top_subject_area -->
             <div class="admin_top_wrap">
-                <span>관리자 페이지</span>
+                <span>QRRO POS MAIN</span>
                 
             </div>
             <!-- contents-area -->
@@ -36,19 +36,19 @@
                 <div class="admin_navi_wrap">
                     <ul>
                         <li >
-                            <a class="admin_list_01">상품 등록</a>
+                            <a class="admin_list_01">판매 현황</a>
                         </li>
                         <li>
-                            <a class="admin_list_02">상품 목록</a>
+                            <a class="admin_list_02">매출 관리</a>
                         </li>
                         <lI>
-                            <a class="admin_list_03">작가 등록</a>                            
+                            <a class="admin_list_03">메뉴 관리</a>                            
                         </lI>
                         <lI>
-                            <a class="admin_list_04">작가 관리</a>                            
+                            <a class="admin_list_04">테이블 관리</a>                            
                         </lI>
                         <lI>
-                            <a class="admin_list_05">회원 관리</a>                            
+                            <a class="admin_list_05">사업장 관리</a>                            
                         </lI>                                                                                             
                     </ul>
 <!-- 

@@ -54,11 +54,11 @@ body {
 }
 
 /* 로그인 버튼 */
-.login_button_wrap {
+.login_button_wrap, .tlogin_button_wrap{
     margin-top: 20px; /* 마진 조정 */
     text-align: center;
 }
-.login_button {
+.login_button, .tlogin_button{
     width: 86%; /* 너비 조정 */
     height: 60px; /* 높이 조정 */
     background-color: #333; /* 버튼 색상 변경 */
@@ -70,6 +70,18 @@ body {
     border: none; /* 테두리 제거 */
     cursor: pointer;
 }
-.login_button:hover {
+.login_button:hover,.tlogin_button:hover {
     background-color: #222; /* 호버 색상 변경 */
+}
+ 
+/* 로그인 실패시 경고글 */
+.login_warn,.tlogin_warn{
+    margin-top: 30px;
+    text-align: center;
+    color : red;
+}
+
+/* float 속성 해제 */
+.clearfix{
+	clear: both;
 }

@@ -26,5 +26,23 @@
   			select count(*) from store_info where memberId = #{memberId}
   	
   		</select>
+  		
+  		 <!-- 관리자로그인 -->
+     	 <select id="memberLogin" resultType="com.qrro.model.MemberVO">
+      
+         	select memberId, storeName, adminck
+         	from store_info 
+         	where memberId = #{memberId} and memberPw = #{memberPw}
+      
+     	 </select>
+     	 
+     	  <!-- 테이블로그인 -->
+      <select id="tableLogin" resultType="com.qrro.model.TableVO">
+      
+         select seq, table_id, table_pw 
+         from table_info 
+         where table_id = #{table_id} and table_pw = #{table_pw}
+      
+      </select>
 	
   </mapper>
