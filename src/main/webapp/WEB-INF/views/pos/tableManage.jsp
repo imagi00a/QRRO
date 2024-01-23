@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>POS MAIN</title>
-<link rel="stylesheet" href="../resources/css/pos/posMain.css">
+<link rel="stylesheet" href="../resources/css/pos/tableManage.css">
  
 <script
   src="https://code.jquery.com/jquery-3.4.1.js"
@@ -42,7 +42,7 @@
                 <div class="admin_navi_wrap">
                     <ul>
                         <li >
-                            <a class="admin_list_01" href="/pos/posMain">판매 현황</a>
+                            <a class="admin_list_01" href="/pos/posMain" >판매 현황</a>
                         </li>
                         <li>
                             <a class="admin_list_02" href="/pos/salesManage">매출 관리</a>
@@ -60,12 +60,36 @@
                 </div>
                 
                 <div class="admin_content_wrap">
-                    <div class="admin_content_subject"><span>판매 현황</span></div>
+                    <div class="admin_content_subject"><span>테이블 관리</span></div>
                 </div>
                 <div class="clearfix"></div>
-            </div>
+                <div class="table_wrap">
+					<table>
+						<thead>
+							<tr>
+								<th class="seq_width">번호</th>
+								<th class="table_id_width">테이블번호</th>
+								<th class="table_pw">비밀번호</th>
+							</tr>
+						</thead>
+							<tr>
+								<td>번호 내용</td>
+								<td>테이블번호 내용</td>
+								<td>비밀번호 내용</td>
+							</tr>
+							<tr>
+								<td>번호 내용</td>
+								<td>테이블 번호 내용</td>
+								<td>비밀번호 내용</td>
+							</tr>
+					</table>
+				</div>
+
             </div>
         </div>
+    </div>
+
+                
  
 </body>
 </html>

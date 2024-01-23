@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>ORDER MAIN</title>
-<link rel="stylesheet" href="../resources/css/order/orderMain.css">
+<link rel="stylesheet" href="../resources/css/order/orderMain5.css">
  
 <script
   src="https://code.jquery.com/jquery-3.4.1.js"
@@ -59,7 +59,7 @@
                 </div>
                 
                 <div class="order_content_wrap">
-                     <div class="order_content_subject"><span>위스키</span></div>
+                     <div class="order_content_subject"><span>SIDE DISH</span></div>
                 </div>
                 <div class="clearfix"></div>
             </div>

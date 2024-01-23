@@ -20,18 +20,18 @@ public class MainController {
 	}
 	
 //포스메인 페이지 이동
-	@RequestMapping(value = "/pos/posMain", method = RequestMethod.GET)
-	public void posMainPageGET() {
-		
-		logger.info("포스메인 페이지 진입");
-		
-	}
+//	@RequestMapping(value = "/pos/posMain", method = RequestMethod.GET)
+//	public void posMainPageGET() {
+//		
+//		logger.info("포스메인 페이지 진입");
+//		
+//	}
 
 //오더메인 페이지 이동
-@RequestMapping(value = "/order/orderMain", method = RequestMethod.GET)
-public void orderMainPageGET() {
-	
-	logger.info("오더메인 페이지 진입");
-	
-}
+//@RequestMapping(value = "/order/orderMain", method = RequestMethod.GET)
+//public void orderMainPageGET() {
+//	
+//	logger.info("오더메인 페이지 진입");
+//	
+//}
 }

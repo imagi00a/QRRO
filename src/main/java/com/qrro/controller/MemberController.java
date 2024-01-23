@@ -99,7 +99,8 @@ public class MemberController {
 	            
 	        } else if(lvo.getAdminCk() != 1) {
 	            // adminCK가 1이 아닌 경우 (관리자가 아님)
-	            rttr.addFlashAttribute("result", "notAdmin");
+	        	int result = 1;
+	            rttr.addFlashAttribute("result",result);
 	            return "redirect:/member/login";
 	        }
 	        

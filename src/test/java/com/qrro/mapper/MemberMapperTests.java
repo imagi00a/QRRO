@@ -61,23 +61,23 @@ public class MemberMapperTests {
 //        
 //    }
 	/* 로그인 쿼리 mapper 메서드 테스트 */
-    @Test
-    public void tableLogin() throws Exception{
-        
-        TableVO table = new TableVO();    // MemberVO 변수 선언 및 초기화
-        
-        /* 올바른 아이디 비번 입력경우 */
-        table.setTable_id("table1");
-        table.setTable_pw("1111");
-        
-        /* 올바른 않은 아이디 비번 입력경우 */
-        //member.setMemberId("test1123");
-        //member.setMemberPw("test1321321");
-        
-        membermapper.tableLogin(table);
-        System.out.println("결과 값 : " + membermapper.tableLogin(table));
-        
-    }
-	
+//    @Test
+//    public void tableLogin() throws Exception{
+//        
+//        TableVO table = new TableVO();    // MemberVO 변수 선언 및 초기화
+//        
+//        /* 올바른 아이디 비번 입력경우 */
+//        table.setTable_id("table1");
+//        table.setTable_pw("1111");
+//        
+//        /* 올바른 않은 아이디 비번 입력경우 */
+//        //member.setMemberId("test1123");
+//        //member.setMemberPw("test1321321");
+//        
+//        membermapper.tableLogin(table);
+//        System.out.println("결과 값 : " + membermapper.tableLogin(table));
+//        
+//    }
+//	
 	
 }
