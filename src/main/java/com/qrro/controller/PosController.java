@@ -7,7 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.qrro.model.TableVO;
 import com.qrro.service.PosService;
 
 @Controller
@@ -39,11 +41,11 @@ public class PosController {
     
     /* 테이블 관리 페이지 */
     @RequestMapping(value = "tableManage", method = RequestMethod.GET)
-    public void tableListGET(Model model) {
+    public void tableManageGET(Model model) {
         
     	logger.info("테이블 관리 페이지 접속");
         
-        model.addAttribute("list", pservice.getTableList());
+        model.addAttribute("tableManage", pservice.getTableManage());
     }
     
     /* 사업장 관리 페이지 접속 */
@@ -51,5 +53,18 @@ public class PosController {
     public void storeManageGET() throws Exception{
     	logger.info("사업장 관리 페이지 접속");
     }
-	
+    
+    /* 게시판 등록 */
+    @RequestMapping(value = "tableManage", method = RequestMethod.POST)
+    public String tableEnrollPOST(TableVO table, RedirectAttributes rttr) {
+        
+        logger.info("tableVO : " + table);
+        
+        pservice.tEnroll(table);
+        
+        rttr.addFlashAttribute("result", "enrol success");
+        
+        return "redirect:/pos/tableManage";
+        
+    }
 }

@@ -5,11 +5,20 @@
   <mapper namespace="com.qrro.mapper.PosMapper">
   
  	 <!-- 테이블 목록 -->
-  
-	  <select id="getTableList" resultType="com.qrro.model.TableVO">
+	  <select id="getTableManage" resultType="com.qrro.model.TableVO">
 	  
-	  		select * from table_info;
+	  		select * from table_info
 	  
 	  </select>
-
+	
+	<!-- 테이블 등록 -->
+	<insert id="tEnroll">
+        
+        insert into table_info
+        (table_id, table_pw) 
+        values 
+        (#{table_id}, #{table_pw})
+        
+    </insert>
+	
   </mapper>

@@ -59,7 +59,7 @@
                 </div>
                 
                 <div class="order_content_wrap">
-                     <div class="order_content_subject"><span>위스키</span></div>
+                     <div class="order_content_subject"><span>WHISKY</span></div>
                 </div>
                 <div class="clearfix"></div>
             </div>

@@ -120,7 +120,44 @@ ul{
     line-height: 80px;
     color: white;    
 }
-
+ table{
+ 	border-collapse: collapse;
+ 	width: 760px;    
+ 	margin-top : 20px;
+ 	text-align: center;
+  }
+  td, th{
+  	border : 1px solid black;
+  	height: 50px;
+  }
+  th{
+  	font-size : 17px;
+  }
+  thead{
+  	font-weight: 700;
+  }
+ .table_wrap{
+  	margin : 50px 0 0 50px;
+  }
+  .seq_width{
+  	width: 12%;
+  }
+  .table_id_width{
+  	width: 20%;
+  }
+  .table_pw_width{
+  	width: 15%;
+  }
+  
+  /* 테이블등록 입력란 */
+  input[type=text] {
+    width: 92%;
+    height: 75%;
+    text-align: center;
+  }
+  
+  
+  
 
  
  

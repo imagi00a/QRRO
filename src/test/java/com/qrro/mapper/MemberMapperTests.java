@@ -1,19 +1,23 @@
 package com.qrro.mapper;
 
+import java.util.List;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.qrro.model.TableVO;
+import com.qrro.controller.MainController;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
 public class MemberMapperTests {
-
+	private static final Logger logger = LoggerFactory.getLogger(MainController.class);
 	@Autowired
-	private MemberMapper membermapper;			//MemberMapper.java 인터페이스 의존성 주입
+	private PosMapper mapper;			//MemberMapper.java 인터페이스 의존성 주입
 	
 	//회원가입 쿼리 테스트 메서드
 //	@Test
@@ -79,5 +83,24 @@ public class MemberMapperTests {
 //        
 //    }
 //	
-	
+	 /* 게시판 목록 테스트 */
+    @Test
+    public void testGetTableList() {
+        
+        
+        List list = mapper.getTableManage();
+       /* 일반적 for문 */
+//        for(int i = 0; i < list.size();i++) {
+//            logger.info("" + list.get(i));
+//        }
+        
+       /* foreach문(향상된 for문) */
+//        for(Object a : list) {
+//            logger.info("" + a);
+//        }
+        
+       /* foreach문 & 람다식 */
+        list.forEach(board -> logger.info("" + board));
+        
+    }
 }

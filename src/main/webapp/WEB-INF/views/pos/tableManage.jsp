@@ -61,35 +61,60 @@
                 
                 <div class="admin_content_wrap">
                     <div class="admin_content_subject"><span>테이블 관리</span></div>
-                </div>
-                <div class="clearfix"></div>
                 <div class="table_wrap">
 					<table>
 						<thead>
 							<tr>
 								<th class="seq_width">번호</th>
 								<th class="table_id_width">테이블번호</th>
-								<th class="table_pw">비밀번호</th>
+								<th class="table_pw_width">비밀번호</th>
 							</tr>
 						</thead>
-							<tr>
-								<td>번호 내용</td>
-								<td>테이블번호 내용</td>
-								<td>비밀번호 내용</td>
-							</tr>
-							<tr>
-								<td>번호 내용</td>
-								<td>테이블 번호 내용</td>
-								<td>비밀번호 내용</td>
-							</tr>
+						 <c:forEach items="${tableManage}" var="list">
+				            <tr>
+				                <td><c:out value="${list.seq}"/></td>
+				                <td><c:out value="${list.table_id}"/></td>
+				                <td><c:out value="${list.table_pw}"/></td>
+				            </tr>
+       					 </c:forEach>
+       					 <form action = "/pos/tableManage" method="POST">
+			       			<tr>
+						        <td><button class="btn">테이블 등록</button></td>
+						      	<td><input type="text" name = "table_id" placeholder="테이블 번호"></td>
+						        <td><input type="text" name = "table_pw" placeholder="비밀번호"></td>
+						    </tr>
+						 </form>   
 					</table>
 				</div>
+                </div>
+                <div class="clearfix"></div>
+                
 
             </div>
         </div>
     </div>
 
                 
- 
+ <script>
+$(document).ready(function(){
+    
+    let result = '<c:out value="${result}"/>';
+    
+    checkAlert(result);
+    
+    function checkAlert(result){
+        
+        if(result === ''){
+            reutrn;
+        }
+        
+        if(result === "enrol success"){
+            alert("등록이 완료되었습니다.");
+        }
+        
+    }    
+    
+});
+</script>
 </body>
 </html>
