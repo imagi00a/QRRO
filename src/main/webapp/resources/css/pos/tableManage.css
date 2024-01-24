@@ -128,7 +128,7 @@ ul{
   }
   td, th{
   	border : 1px solid black;
-  	height: 50px;
+  	height: 40px;
   }
   th{
   	font-size : 17px;
@@ -140,13 +140,19 @@ ul{
   	margin : 50px 0 0 50px;
   }
   .seq_width{
-  	width: 12%;
+  	width: 10%;
   }
   .table_id_width{
   	width: 20%;
   }
   .table_pw_width{
   	width: 15%;
+  }
+  .table_update_width{
+  	width: 10%;
+  }
+  .table_delete_width{
+  	width: 10%;
   }
   
   /* 테이블등록 입력란 */
@@ -155,6 +161,12 @@ ul{
     height: 75%;
     text-align: center;
   }
+   /* 테이블등록 버튼 */
+   .btn{
+   	width: 92%;
+   	height: 75%;
+   }
+  
   
   
   

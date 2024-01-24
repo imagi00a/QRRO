@@ -62,12 +62,23 @@
                 <div class="admin_content_wrap">
                     <div class="admin_content_subject"><span>테이블 관리</span></div>
                 <div class="table_wrap">
+               		<table>
+       					 <form action = "/pos/tableManage" method="POST">
+			       			<tr>
+						      	<td><input type="text" name = "table_id" placeholder="테이블 ID"></td>
+						        <td><input type="text" name = "table_pw" placeholder="비밀번호"></td>
+						        <td><button class="btn">테이블 등록</button></td>
+						    </tr>
+						 </form> 
+					</table>  
 					<table>
 						<thead>
 							<tr>
 								<th class="seq_width">번호</th>
-								<th class="table_id_width">테이블번호</th>
+								<th class="table_id_width">테이블 ID</th>
 								<th class="table_pw_width">비밀번호</th>
+								<th class="table_update_width">테이블 수정</th>
+								<th class="table_delete_width">테이블 삭제</th>
 							</tr>
 						</thead>
 						 <c:forEach items="${tableManage}" var="list">
@@ -75,15 +86,10 @@
 				                <td><c:out value="${list.seq}"/></td>
 				                <td><c:out value="${list.table_id}"/></td>
 				                <td><c:out value="${list.table_pw}"/></td>
+				                <td><button class="btn">수정</button></td>
+								<td><button class="btn">삭제</button></td>
 				            </tr>
        					 </c:forEach>
-       					 <form action = "/pos/tableManage" method="POST">
-			       			<tr>
-						        <td><button class="btn">테이블 등록</button></td>
-						      	<td><input type="text" name = "table_id" placeholder="테이블 번호"></td>
-						        <td><input type="text" name = "table_pw" placeholder="비밀번호"></td>
-						    </tr>
-						 </form>   
 					</table>
 				</div>
                 </div>
