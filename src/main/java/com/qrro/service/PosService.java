@@ -15,4 +15,7 @@ public interface PosService {
 	//테이블 수정
 	public int tUpdate(TableVO table);
 	
+	//테이블 삭제
+	public int tDelete(int seq);
+	
 }

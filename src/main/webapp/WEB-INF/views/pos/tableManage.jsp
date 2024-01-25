@@ -77,10 +77,9 @@
 								<th class="seq_width">번호</th>
 								<th class="table_id_width">테이블 ID</th>
 								<th class="table_pw_width">비밀번호</th>
-							<form id="uForm" action="/pos/tableUpdate" method="POST">
 								<th class="table_update_width">테이블 수정</th>
-							</form>
 								<th class="table_delete_width">테이블 삭제</th>
+							
 							</tr>
 						</thead>
 						  <c:forEach items="${tableManage}" var="list">
@@ -89,7 +88,7 @@
                             <td class="table_id"><c:out value="${list.table_id}"/></td>
                             <td class="table_pw"><c:out value="${list.table_pw}"/></td>
                             <td><button class="ubtn">수정</button></td>
-                            <td><button class="btn">삭제</button></td>
+                            <td><button class="dbtn">삭제</button></td>
                         </tr>
                     </c:forEach>
 					</table>
@@ -105,6 +104,34 @@
                 
  <script>
  
+ //테이블 삭제 아작스
+ $(document).ready(function(){
+	    // 테이블 삭제 이벤트 위임
+	    $(document).on("click", ".dbtn", function(e){
+	        e.preventDefault();
+	        
+	        var currentRow = $(this).closest('tr');
+	        var seq = currentRow.find('td:first').text(); // 삭제할 테이블의 식별 번호 추출
+
+	        // AJAX를 사용하여 삭제 요청을 서버에 전송
+	        $.ajax({
+	            url: '/pos/tableDelete',
+	            type: 'POST',
+	            data: { seq: seq },
+	            success: function(response) {
+	                // 성공 시 처리 로직
+	                alert("삭제가 완료되었습니다.");
+	                currentRow.remove(); // 테이블 목록에서 해당 행 제거
+	            },
+	            error: function() {
+	                // 실패 시 처리 로직
+	                alert("삭제에 실패했습니다.");
+	            }
+	        });
+	    });
+	});
+ 
+ //테이블 수정 아작스
  function submitUpdatedData(row) {
 	    var tableIdInput = row.find('.edit_table_id');
 	    var tablePwInput = row.find('.edit_table_pw');

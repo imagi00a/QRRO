@@ -79,4 +79,16 @@ public class PosController {
         
     }
     
+    /* 테이블 삭제 */
+    @RequestMapping(value = "tableDelete", method = RequestMethod.POST)
+    public String tableDeletePOST(int seq, RedirectAttributes rttr) {
+    	
+    	pservice.tDelete(seq);
+    	
+    	rttr.addFlashAttribute("result", "delete success");
+    	
+    	return "redirect:/pos/tableManage";
+    	
+    }
+    
 }

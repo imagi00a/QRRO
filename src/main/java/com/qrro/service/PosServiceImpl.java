@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.qrro.mapper.PosMapper;
 import com.qrro.model.TableVO;
@@ -27,11 +28,29 @@ public class PosServiceImpl implements PosService {
 
 		mapper.tEnroll(table);
 	}
-
+	
+	//테이블 수정
 	@Override
 	public int tUpdate(TableVO table) {
 		
 		return mapper.tUpdate(table);
+	}
+	
+	//테이블 삭제
+	@Override
+	
+	@Transactional
+	public int tDelete(int seq) {
+		
+		int result = mapper.tDelete(seq);
+		
+		 // AUTO_INCREMENT 재설정
+        mapper.tReset1();
+        mapper.tReset2();
+        mapper.tReset3();
+
+        return result; // 삭제 작업 결과 반환
+		
 	}
 
 	
