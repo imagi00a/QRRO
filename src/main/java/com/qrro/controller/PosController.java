@@ -54,8 +54,8 @@ public class PosController {
     	logger.info("사업장 관리 페이지 접속");
     }
     
-    /* 게시판 등록 */
-    @RequestMapping(value = "tableManage", method = RequestMethod.POST)
+    /* 테이블 등록 */
+    @RequestMapping(value = "tableEnroll", method = RequestMethod.POST)
     public String tableEnrollPOST(TableVO table, RedirectAttributes rttr) {
         
         logger.info("tableVO : " + table);
@@ -65,6 +65,18 @@ public class PosController {
         rttr.addFlashAttribute("result", "enrol success");
         
         return "redirect:/pos/tableManage";
+    }
+    
+    /* 테이블 수정 */
+    @RequestMapping(value = "tableUpdate", method = RequestMethod.POST)
+    public String tableUpdatePOST(TableVO table, RedirectAttributes rttr) {
+        
+        pservice.tUpdate(table);
+        
+        rttr.addFlashAttribute("result", "update success");
+        
+        return "redirect:/pos/tableManage";
         
     }
+    
 }

@@ -28,6 +28,12 @@ public class PosServiceImpl implements PosService {
 		mapper.tEnroll(table);
 	}
 
+	@Override
+	public int tUpdate(TableVO table) {
+		
+		return mapper.tUpdate(table);
+	}
+
 	
 		
 }

@@ -162,7 +162,7 @@ ul{
     text-align: center;
   }
    /* 테이블등록 버튼 */
-   .btn{
+   button{
    	width: 92%;
    	height: 75%;
    }

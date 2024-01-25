@@ -12,4 +12,7 @@ public interface PosService {
 	//테이블 등록
 	public void tEnroll(TableVO table);
 	
+	//테이블 수정
+	public int tUpdate(TableVO table);
+	
 }

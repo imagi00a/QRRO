@@ -20,5 +20,15 @@
         (#{table_id}, #{table_pw})
         
     </insert>
+    
+     <!-- 테이블 수정 -->
+    <update id="tUpdate">
+    
+        update table_info 
+        set 
+        table_id = #{table_id}, 
+        table_pw = #{table_pw} 
+        where seq = #{seq}
+    </update>
 	
   </mapper>
