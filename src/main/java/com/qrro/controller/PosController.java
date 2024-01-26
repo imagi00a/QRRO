@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.qrro.model.MemberVO;
 import com.qrro.model.TableVO;
 import com.qrro.service.PosService;
 
@@ -48,11 +49,6 @@ public class PosController {
         model.addAttribute("tableManage", pservice.getTableManage());
     }
     
-    /* 사업장 관리 페이지 접속 */
-    @RequestMapping(value = "storeManage", method = RequestMethod.GET)
-    public void storeManageGET() throws Exception{
-    	logger.info("사업장 관리 페이지 접속");
-    }
     
     /* 테이블 등록 */
     @RequestMapping(value = "tableEnroll", method = RequestMethod.POST)
@@ -89,6 +85,34 @@ public class PosController {
     	
     	return "redirect:/pos/tableManage";
     	
+    }
+    
+    /* 업장 관리 페이지 */
+    @RequestMapping(value = "storeManage", method = RequestMethod.GET)
+    public void storeManageGET(Model model) {
+    	logger.info("사업장 관리 페이지 접속");
+    	
+    	model.addAttribute("storeManage", pservice.getStoreManage());
+    }
+    
+    /* 업장 정보 수정 페이지 이동 */
+    @RequestMapping(value = "storeUpdate", method = RequestMethod.GET)
+    public void storeUpdateGET(Model model) {
+    	logger.info("업장 정보 수정 페이지 접속");
+        model.addAttribute("storeManage", pservice.getStoreManage());
+        
+    }
+    
+    /* 업장 정보 수정 */
+    @RequestMapping(value = "storeUpdate", method = RequestMethod.POST)
+    public String storeUpdatePOST(MemberVO store, RedirectAttributes rttr) {
+        
+        pservice.sUpdate(store);
+        
+        rttr.addFlashAttribute("result", "update success");
+        
+        return "redirect:/pos/storeManage";
+        
     }
     
 }

@@ -13,7 +13,7 @@
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
 </head>
-</head>
+
 <body>
  
     <div class="wrapper">
@@ -61,11 +61,67 @@
                 
                 <div class="admin_content_wrap">
                     <div class="admin_content_subject"><span>사업장 관리</span></div>
-                </div>
+                <div class="table_wrap">
+                <table>
+       					 <form action = "/pos/storeUpdate" method="GET">
+			       			
+						        <th><button class="btn">업장 정보 수정</button></th>
+						    
+						 </form> 
+					</table>  
+                <table>
+						<thead>
+							<tr>
+								<th class="store_sub_width"> 항목</th>
+								<th class="store_info_width">업장 정보</th>
+							</tr>
+						</thead>
+						<c:forEach items="${storeManage}" var="list"> 
+                        <tr>
+                            <td class="sub_content">관리자 아이디</td>
+                            <td class="info_content"><c:out value="${list.memberId}"/></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_content">관리자 비밀번호</td>
+                            <td class="info_content"><c:out value="${list.memberPw}"/></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_content">업장명</td>
+                            <td class="info_content"><c:out value="${list.storeName}"/></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_content">업장 우편번호</td>
+                            <td class="info_content"><c:out value="${list.memberAddr1}"/></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_content">업장 주소</td>
+                            <td class="info_content"><c:out value="${list.memberAddr2}"/></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_content">업장 상세주소</td>
+                            <td class="info_content"><c:out value="${list.memberAddr3}"/></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_content">사업자 번호</td>
+                            <td class="info_content"><c:out value="${list.storeNum}"/></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_content">사업주</td>
+                            <td class="info_content"><c:out value="${list.memberName}"/></td>
+                        </tr>
+                        <tr>
+                            <td class="sub_content">업장 전화번호</td>
+                            <td class="info_content"><c:out value="${list.storeTel}"/></td>
+                        </tr>
+                    </c:forEach>
+					</table>
+					</div>
+					</div>
                 <div class="clearfix"></div>
             </div>
         </div>
     </div>
- 
+    
+
 </body>
 </html>

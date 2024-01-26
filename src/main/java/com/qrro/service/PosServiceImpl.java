@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.qrro.mapper.PosMapper;
+import com.qrro.model.MemberVO;
 import com.qrro.model.TableVO;
 
 @Service
@@ -51,6 +52,20 @@ public class PosServiceImpl implements PosService {
 
         return result; // 삭제 작업 결과 반환
 		
+	}
+	
+	//업장 정보
+	@Override
+	public List<MemberVO> getStoreManage() {
+		
+		return mapper.getStoreManage();
+	}
+	
+	//업장 정보 수정
+	@Override
+	public int sUpdate(MemberVO store) {
+		
+		return mapper.sUpdate(store);
 	}
 
 	

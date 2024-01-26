@@ -2,6 +2,7 @@ package com.qrro.mapper;
 
 import java.util.List;
 
+import com.qrro.model.MemberVO;
 import com.qrro.model.TableVO;
 
 public interface PosMapper {
@@ -23,6 +24,13 @@ public interface PosMapper {
 	public void tReset1();
 	public void tReset2();
 	public void tReset3();
+	
+	//업장 정보
+	public List<MemberVO> getStoreManage();
+	
+		
+	//업장 정보 수정
+	public int sUpdate(MemberVO store);
 
 	
 	

@@ -37,7 +37,7 @@
         delete from table_info where seq = #{seq}
     
     </delete>
-    
+    <!-- 테이블 삭제 후 seq 재정렬-->
     <update id="tReset1">
     	 SET @CNT = 0;
 	</update>
@@ -49,5 +49,29 @@
     <update id="tReset3">
     	ALTER TABLE table_info AUTO_INCREMENT = 1;
 	</update>
+	
+	 <!-- 사업장 조회 -->
+	  <select id="getStoreManage" resultType="com.qrro.model.MemberVO">
+	  
+	  		select * from store_info where adminCk = 1
+	  
+	  </select>
+	  
+	  <!-- 업장 정보 수정 -->
+	  <update id="sUpdate">
+    
+        update store_info 
+        set 
+        memberId = #{memberId}, 
+        memberPw = #{memberPw}, 
+        storeName = #{storeName}, 
+        memberAddr1 = #{memberAddr1}, 
+        memberAddr2 = #{memberAddr2}, 
+        memberAddr3 = #{memberAddr3}, 
+        storeNum = #{storeNum}, 
+        memberName = #{memberName}, 
+        storeTel = #{storeTel} 
+        where adminCk = 1
+    </update>
 	
   </mapper>
