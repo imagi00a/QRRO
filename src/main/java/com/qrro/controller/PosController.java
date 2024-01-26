@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.qrro.model.MemberVO;
+import com.qrro.model.MenuVO;
 import com.qrro.model.TableVO;
 import com.qrro.service.PosService;
 
@@ -114,5 +115,18 @@ public class PosController {
         return "redirect:/pos/storeManage";
         
     }
+    
+    /* 메뉴 등록 */
+    @RequestMapping(value = "menuEnroll", method = RequestMethod.POST)
+   	public String menuEnrollPOST(MenuVO menu, RedirectAttributes rttr) {
+   		
+   		logger.info("goodsEnrollPOST......" + menu);
+   		
+   		pservice.menuEnroll(menu);
+   		
+   		rttr.addFlashAttribute("enroll_result", menu.getMenu());
+   		
+   		return "redirect:/pos/menuManage";
+   	}	
     
 }

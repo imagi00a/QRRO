@@ -3,6 +3,7 @@ package com.qrro.service;
 import java.util.List;
 
 import com.qrro.model.MemberVO;
+import com.qrro.model.MenuVO;
 import com.qrro.model.TableVO;
 
 public interface PosService {
@@ -24,5 +25,8 @@ public interface PosService {
 	
 	//업장 정보 수정
 	public int sUpdate(MemberVO store);
+	
+	//메뉴 등록
+	public void menuEnroll(MenuVO menu);
 		
 }

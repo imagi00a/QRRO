@@ -9,14 +9,13 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.qrro.controller.MainController;
-import com.qrro.model.MemberVO;
+import com.qrro.model.MenuVO;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
 public class MemberMapperTests {
 	private static final Logger logger = LoggerFactory.getLogger(MainController.class);
-	@Autowired
-	private PosMapper mapper;			//MemberMapper.java 인터페이스 의존성 주입
+	
 	
 //	 /* 테이블 수정 */
 //    @Test
@@ -32,24 +31,5 @@ public class MemberMapperTests {
 //        
 //    }
 	
-	/* 게시판 수정 */
-    @Test
-    public void testModify() {
-        
-        MemberVO store = new MemberVO();
-        store.setMemberId("수정 내용");
-        store.setMemberPw("수정 내용");
-        store.setStoreName("수정 내용");
-        store.setMemberAddr1("수정 내용");
-        store.setMemberAddr2("수정 내용");
-        store.setMemberAddr3("수정 내용");
-        store.setStoreNum("수정 내용");
-        store.setMemberName("수정 내용");
-        store.setStoreTel("수정 내용");
-        store.setAdminCk(1);
-        
-        int result = mapper.sUpdate(store);
-        logger.info("result : " +result);
-        
-    }
+	
 }

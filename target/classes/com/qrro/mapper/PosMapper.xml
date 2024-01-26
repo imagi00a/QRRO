@@ -73,5 +73,15 @@
         storeTel = #{storeTel} 
         where adminCk = 1
     </update>
+    
+    <!-- 메뉴 등록 -->
+  	<insert id="menuEnroll">
+  	
+  		insert into menu_info
+  		(seq, categori, menu, price, pic_1, pic_2)
+		values
+		(#{seq},#{categori}, #{menu},#{price},#{pic_1},#{pic_2})
+
+  	</insert>
 	
   </mapper>

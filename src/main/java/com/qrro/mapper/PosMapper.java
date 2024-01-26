@@ -3,6 +3,7 @@ package com.qrro.mapper;
 import java.util.List;
 
 import com.qrro.model.MemberVO;
+import com.qrro.model.MenuVO;
 import com.qrro.model.TableVO;
 
 public interface PosMapper {
@@ -28,9 +29,12 @@ public interface PosMapper {
 	//업장 정보
 	public List<MemberVO> getStoreManage();
 	
-		
 	//업장 정보 수정
 	public int sUpdate(MemberVO store);
+	
+	
+	//메뉴 등록
+	public void menuEnroll(MenuVO menu);
 
 	
 	

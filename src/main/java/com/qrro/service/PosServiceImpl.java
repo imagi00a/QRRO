@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.qrro.mapper.PosMapper;
 import com.qrro.model.MemberVO;
+import com.qrro.model.MenuVO;
 import com.qrro.model.TableVO;
 
 @Service
@@ -67,6 +68,13 @@ public class PosServiceImpl implements PosService {
 		
 		return mapper.sUpdate(store);
 	}
+	
+	@Override
+	public void menuEnroll(MenuVO menu) {
+		
+		mapper.menuEnroll(menu);
+	}
+
 
 	
 		

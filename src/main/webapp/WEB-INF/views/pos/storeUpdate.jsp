@@ -136,9 +136,9 @@
 		        window.location.href = "/pos/storeManage";
 		    });
 		});
-		
-		
+						
 		/*수정하기 버튼*/
+		$(document).ready(function() {
 			$(".update_button").on("click", function() {
 
 				/* 입력값 변수 */
@@ -213,10 +213,12 @@
 		 
 				$("#update_form").attr("action", "/pos/storeUpdate");
 				$("#update_form").submit();
-		        }  
+		        } 
+		        
 		        return false;
 
 			});
+		});
 		
 		
 
