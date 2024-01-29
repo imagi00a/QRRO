@@ -6,7 +6,7 @@ public class MenuVO {
 	private int seq;
 	
 	/* 메뉴 카테고리 */
-	private String categori;
+	private String category;
 	
 	/* 메뉴 이름 */
 	private String menu;
@@ -29,12 +29,12 @@ public class MenuVO {
 		this.seq = seq;
 	}
 
-	public String getCategori() {
-		return categori;
+	public String getCategory() {
+		return category;
 	}
 
-	public void setCategori(String categori) {
-		this.categori = categori;
+	public void setCategory(String category) {
+		this.category = category;
 	}
 
 	public String getMenu() {
@@ -71,7 +71,7 @@ public class MenuVO {
 	
 	@Override
 	public String toString() {
-		return "MenuVO [seq=" + seq + ", categori=" + categori + ", menu=" + menu + ", price=" + price + ", pic_1="
+		return "MenuVO [seq=" + seq + ", category=" + category + ", menu=" + menu + ", price=" + price + ", pic_1="
 				+ pic_1 + ", pic_2=" + pic_2 + "]";
 	}
 	

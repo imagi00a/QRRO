@@ -62,7 +62,7 @@
 							<table>
 								<tr>
 									<td>
-										<select name = "categori">
+										<select name = "category">
 											<option value="1">위스키</option>
 											<option value="2">칵테일</option>
 											<option value="3">맥주</option>

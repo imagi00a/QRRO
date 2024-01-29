@@ -2,6 +2,8 @@ package com.qrro.service;
 
 import java.util.List;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import com.qrro.model.MemberVO;
 import com.qrro.model.MenuVO;
 import com.qrro.model.TableVO;
