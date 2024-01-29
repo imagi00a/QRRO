@@ -69,6 +69,7 @@ public class PosServiceImpl implements PosService {
 		return mapper.sUpdate(store);
 	}
 	
+	//메뉴 등록
 	@Override
 	public void menuEnroll(MenuVO menu) {
 		

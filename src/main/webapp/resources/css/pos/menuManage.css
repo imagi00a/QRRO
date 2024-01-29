@@ -121,6 +121,77 @@ ul{
     color: white;    
 }
 
+ table{
+ 	border-collapse: collapse;
+ 	width: 780px;    
+ 	margin-top : 20px;
+ 	text-align: center;
+  }
+  td, th{
+  	border : 1px solid black;
+  	height: 40px;
+  }
+  th{
+  	font-size : 17px;
+  }
+  thead{
+  	font-weight: 700;
+  }
+ .table_wrap{
+  	margin : 50px 0 0 50px;
+  }
+  .seq_width{
+  	width: 10%;
+  }
+  .table_id_width{
+  	width: 20%;
+  }
+  .table_pw_width{
+  	width: 15%;
+  }
+  .table_update_width{
+  	width: 10%;
+  }
+  .table_delete_width{
+  	width: 10%;
+  }
+  
+  /* 테이블등록 입력란 */
+  input[type=text] {
+    width: 92%;
+    height: 75%;
+    text-align: center;
+  }
+   /* 버튼 */
+   button{
+   	width: 92%;
+   	height: 75%;
+   }
+   
+   /* 셀렉트 */
+    select {
+    width: 92%;
+   	height: 75%;
+   	text-align: center;
+   }
+#menu-photo {
+    width: 70%; /* 예시: 너비 조정 */
+    height: 75%;
+    text-align: center;
+    display: inline-block;
+}
+
+#photo-upload-btn {
+    width: 25%; /* 예시: 너비 조정 */
+    height: 75%;
+    display: inline-block;
+}
+  
+  
+  
+
+ 
+ 
 
  
  

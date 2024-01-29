@@ -16,6 +16,8 @@ import com.qrro.model.MenuVO;
 public class MemberMapperTests {
 	private static final Logger logger = LoggerFactory.getLogger(MainController.class);
 	
+	@Autowired
+	private PosMapper mapper;
 	
 //	 /* 테이블 수정 */
 //    @Test
@@ -30,6 +32,19 @@ public class MemberMapperTests {
 //        logger.info("result : " +result);
 //        
 //    }
-	
+	/* 메뉴 등록 */
+	@Test
+	public void menuEnrollTest() throws Exception{
+		
+		MenuVO menu = new MenuVO();
+		
+		menu.setCategori("test");
+		menu.setMenu("test");
+		menu.setPrice(1);
+		menu.setPic_1("test");
+		menu.setPic_2("test");
+		
+		mapper.menuEnroll(menu);
+	}
 	
 }
