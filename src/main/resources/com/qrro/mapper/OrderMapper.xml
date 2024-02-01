@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qrro.mapper.OrderMapper">
+
+	<!-- 오더 메뉴1 목록 -->
+	<select id="getOrderView1" resultType="com.qrro.model.MenuVO">
+
+		select * from menu_info where category = 1
+
+	</select>
+	
+</mapper>

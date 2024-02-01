@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,17 +59,18 @@
 						<span>WHISKY</span>
 					</div>
 					<div class="order_menu_grid">
-<!--  c:foreach 사용하여 매뉴1 부분에 조건에 맞게(카테고리 1번) 메뉴 정보를 순차적으로 불러오게 해야함
-필요시 SQL 에서 정렬문 사용 내림차순 오름차순  -->
-						<div class="order_menu_item">메뉴 1</div>
-						<div class="order_menu_item">메뉴 2</div>
-						<div class="order_menu_item">메뉴 3</div>
-						<div class="order_menu_item">메뉴 4</div>
-						<div class="order_menu_item">메뉴 5</div>
-						<div class="order_menu_item">메뉴 6</div>
-						<div class="order_menu_item">메뉴 7</div>
-						<div class="order_menu_item">메뉴 8</div>
-
+						<c:forEach items="${orderMain}" var="list">
+							<div class="order_menu_item">
+								<img src="<c:url value='/resources/upload/${list.npic_1}'/>"
+									alt="${list.menu}" />
+								<div class="menu_name">
+									<c:out value="${list.menu}" />
+								</div>
+								<div class="menu_price">
+									<fmt:formatNumber value="${list.price}" type="number" groupingUsed="true" pattern="#,##0"/>
+								</div>
+							</div>
+						</c:forEach>
 					</div>
 				</div>
 				<div class="clearfix"></div>

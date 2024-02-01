@@ -2,9 +2,13 @@ package com.qrro.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.qrro.service.OrderService;
 
 @Controller
 @RequestMapping("/order")
@@ -12,12 +16,15 @@ public class OrderController {
 
 	private static final Logger logger = LoggerFactory.getLogger(MainController.class);
 	
-	
+	@Autowired
+	private OrderService oservice;
 	
 	//	오더메인 페이지 이동
 	@RequestMapping(value = "orderMain", method = RequestMethod.GET)
-	public void orderMainPageGET() throws Exception{
+	public void orderMainPageGET(Model model) throws Exception{
 		logger.info("오더메인 페이지 진입");
+		
+		model.addAttribute("orderMain", oservice.getOrderView1());
 	}
 	
 	//	오더메인2 페이지 이동
