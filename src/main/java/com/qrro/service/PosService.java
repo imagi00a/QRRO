@@ -30,5 +30,11 @@ public interface PosService {
 	
 	//메뉴 등록
 	public void menuEnroll(MenuVO menu, MultipartFile pic1, MultipartFile pic2) throws Exception;
+	
+	//메뉴 목록
+	public List<MenuVO> getMenuManage();
+	
+	//메뉴 삭제
+	public int mDelete(int seq);
 		
 }

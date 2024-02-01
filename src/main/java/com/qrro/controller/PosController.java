@@ -41,8 +41,10 @@ public class PosController {
     
     /* 메뉴 관리 페이지 접속 */
     @RequestMapping(value = "menuManage", method = RequestMethod.GET)
-    public void menuManageGET() throws Exception{
+    public void menuManageGET(Model model) throws Exception{
         logger.info("메뉴 관리 페이지 접속");
+        
+        model.addAttribute("menuManage", pservice.getMenuManage());
     }
     
     /* 테이블 관리 페이지 */
@@ -133,5 +135,17 @@ public class PosController {
    		
    		return "redirect:/pos/menuManage";
    	}	
+    
+    /* 메뉴 삭제 */
+    @RequestMapping(value = "menuDelete", method = RequestMethod.POST)
+    public String menuDeletePOST(int seq, RedirectAttributes rttr) {
+    	
+    	pservice.mDelete(seq);
+    	
+    	rttr.addFlashAttribute("result", "delete success");
+    	
+    	return "redirect:/pos/menuManage";
+    	
+    }
     
 }

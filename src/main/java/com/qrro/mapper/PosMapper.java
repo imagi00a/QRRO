@@ -37,6 +37,13 @@ public interface PosMapper {
 	
 	//메뉴 등록
 	public void menuEnroll(MenuVO menu);
+	
+
+	//메뉴 목록
+	public List<MenuVO> getMenuManage();
+	
+	//테이블 삭제
+	public int mDelete(int seq);
 
 	
 	
