@@ -78,9 +78,9 @@
   	<insert id="menuEnroll">
   	
   		insert into menu_info
-  		(category, menu, price, pic_1, pic_2)
+  		(category, menu, price, opic_1, npic_1, opic_2, npic_2)
 		values
-		(#{category}, #{menu},#{price},#{pic_1},#{pic_2})
+		(#{category}, #{menu},#{price},#{opic_1},#{npic_1},#{opic_2},#{npic_2})
 
   	</insert>
 	

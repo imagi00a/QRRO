@@ -29,6 +29,6 @@ public interface PosService {
 	public int sUpdate(MemberVO store);
 	
 	//메뉴 등록
-	public void menuEnroll(MenuVO menu);
+	public void menuEnroll(MenuVO menu, MultipartFile pic1, MultipartFile pic2) throws Exception;
 		
 }

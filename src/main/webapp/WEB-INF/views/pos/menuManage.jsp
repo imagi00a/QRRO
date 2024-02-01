@@ -40,8 +40,7 @@
 				<!-- 네비영역 -->
 				<div class="admin_navi_wrap">
 					<ul>
-						<li><a class="admin_list_01" href="/pos/posMain">판매 현황</a>
-						</li>
+						<li><a class="admin_list_01" href="/pos/posMain">판매 현황</a></li>
 						<li><a class="admin_list_02" href="/pos/salesManage">매출
 								관리</a></li>
 						<lI><a class="admin_list_03" href="/pos/menuManage">메뉴 관리</a>
@@ -58,28 +57,22 @@
 						<span>메뉴 관리</span>
 					</div>
 					<div class="table_wrap">
-						<form action="/pos/menuEnroll" method="POST" >
+						<form action="/pos/menuEnroll" method="POST"  enctype="multipart/form-data">
 							<table>
 								<tr>
-									<td>
-										<select name = "category">
+									<td><select name="category">
 											<option value="1">위스키</option>
 											<option value="2">칵테일</option>
 											<option value="3">맥주</option>
 											<option value="4">안주</option>
 											<option value="5">음료</option>
-										</select>	
-									</td>
+									</select></td>
 									<td><input type="text" name="menu" placeholder="메뉴이름"></td>
 									<td><input type="text" name="price" placeholder="메뉴 가격"></td>
 								</tr>
 								<tr>
-									<td><input type="text" name="pic_1" id="menu-photo"
-										placeholder="메뉴 사진">
-										<button class="btn" id="photo-upload-btn">등록</button></td>
-									<td><input type="text" name="pic_2" id="menu-photo"
-										placeholder="메뉴 상세페이지">
-										<button class="btn" id="photo-upload-btn">등록</button></td>
+									<td><input type="file" name="pic_1" id ="menu_photo"></td>
+									<td><input type="file" name="pic_2" id ="menu-photo"></td>
 									<td><button class="btn">메뉴 등록</button></td>
 								</tr>
 							</table>
@@ -92,11 +85,6 @@
 		</div>
 	</div>
 	<script>
-	
-
-
-	
-	
 		$(document).ready(function() {
 
 			let eResult = '<c:out value="${enroll_result}"/>';

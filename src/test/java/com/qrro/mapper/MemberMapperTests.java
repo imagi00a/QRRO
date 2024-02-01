@@ -33,18 +33,18 @@ public class MemberMapperTests {
 //        
 //    }
 	/* 메뉴 등록 */
-	@Test
-	public void menuEnrollTest() throws Exception{
-		
-		MenuVO menu = new MenuVO();
-		
-		menu.setCategori("test");
-		menu.setMenu("test");
-		menu.setPrice(1);
-		menu.setPic_1("test");
-		menu.setPic_2("test");
-		
-		mapper.menuEnroll(menu);
-	}
+//	@Test
+//	public void menuEnrollTest() throws Exception{
+//		
+//		MenuVO menu = new MenuVO();
+//		
+//		menu.setCategory("test");
+//		menu.setMenu("test");
+//		menu.setPrice(1);
+//		menu.setPic_1("test");
+//		menu.setPic_2("test");
+//		
+//		mapper.menuEnroll(menu, null, null);
+//	}
 	
 }

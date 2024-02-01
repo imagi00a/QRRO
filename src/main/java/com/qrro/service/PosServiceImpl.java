@@ -1,8 +1,11 @@
 package com.qrro.service;
 
+import java.io.File;
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -70,14 +73,44 @@ public class PosServiceImpl implements PosService {
 		return mapper.sUpdate(store);
 	}
 	
+	@Value("${file.upload.path}")
+	private String fileUploadPath;
+	
 	//메뉴 등록
 	@Override
-	public void menuEnroll(MenuVO menu) {
-		
-		mapper.menuEnroll(menu);
+	public void menuEnroll(MenuVO menu, MultipartFile pic1, MultipartFile pic2) throws Exception {
+	    // pic1 파일 처리
+	    String opic_1 = pic1.getOriginalFilename();
+	    String npic_1 = UUID.randomUUID().toString() + "-" + opic_1;
+	    File nFile1 = new File(npic_1);
+	    try {
+	        pic1.transferTo(nFile1);
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        throw e;
+	    }
+
+	    // pic2 파일 처리
+	    String opic_2 = pic2.getOriginalFilename();
+	    String npic_2 = UUID.randomUUID().toString() + "-" + opic_2;
+	    File nFile2 = new File(npic_2);
+	    try {
+	        pic2.transferTo(nFile2);
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        throw e;
+	    }
+
+	    // 메뉴 정보와 파일 경로를 데이터베이스에 저장
+	    menu.setOpic_1(opic_1);
+	    menu.setOpic_2(opic_2);
+	    menu.setNpic_1(npic_1);
+	    menu.setNpic_2(npic_2); 
+
+	    mapper.menuEnroll(menu);
 	}
 
-
+	
 	
 		
 }

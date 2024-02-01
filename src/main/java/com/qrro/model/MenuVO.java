@@ -15,11 +15,22 @@ public class MenuVO {
 	private int price;
 	
 	/* 메뉴 사진 */
-	private String pic_1;
+	private String opic_1;
+	
+	/* 메뉴 사진 */
+	private String npic_1;
 	
 	/* 메뉴 상세페이지*/
-	private String pic_2;
-
+	private String opic_2;
+	
+	/* 메뉴 상세페이지*/
+	private String npic_2;
+	
+	@Override
+	public String toString() {
+		return "MenuVO [seq=" + seq + ", category=" + category + ", menu=" + menu + ", price=" + price + ", opic_1="
+				+ opic_1 + ", npic_1=" + npic_1 + ", opic_2=" + opic_2 + ", npic_2=" + npic_2 + "]";
+	}
 
 	public int getSeq() {
 		return seq;
@@ -53,26 +64,37 @@ public class MenuVO {
 		this.price = price;
 	}
 
-	public String getPic_1() {
-		return pic_1;
+	public String getOpic_1() {
+		return opic_1;
 	}
 
-	public void setPic_1(String pic_1) {
-		this.pic_1 = pic_1;
+	public void setOpic_1(String opic_1) {
+		this.opic_1 = opic_1;
 	}
 
-	public String getPic_2() {
-		return pic_2;
+	public String getNpic_1() {
+		return npic_1;
 	}
 
-	public void setPic_2(String pic_2) {
-		this.pic_2 = pic_2;
+	public void setNpic_1(String npic_1) {
+		this.npic_1 = npic_1;
 	}
-	
-	@Override
-	public String toString() {
-		return "MenuVO [seq=" + seq + ", category=" + category + ", menu=" + menu + ", price=" + price + ", pic_1="
-				+ pic_1 + ", pic_2=" + pic_2 + "]";
+
+	public String getOpic_2() {
+		return opic_2;
 	}
-	
+
+	public void setOpic_2(String opic_2) {
+		this.opic_2 = opic_2;
+	}
+
+	public String getNpic_2() {
+		return npic_2;
+	}
+
+	public void setNpic_2(String npic_2) {
+		this.npic_2 = npic_2;
+	}
+
+
 }

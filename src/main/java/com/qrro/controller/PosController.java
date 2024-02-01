@@ -1,5 +1,7 @@
 package com.qrro.controller;
 
+import java.util.UUID;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.qrro.model.MemberVO;
@@ -118,11 +122,12 @@ public class PosController {
     
     /* 메뉴 등록 */
     @RequestMapping(value = "menuEnroll", method = RequestMethod.POST)
-   	public String menuEnrollPOST(MenuVO menu, RedirectAttributes rttr) {
-   		
+   	public String menuEnrollPOST(MenuVO menu, RedirectAttributes rttr,
+   			@RequestParam("pic_1") MultipartFile pic1, @RequestParam("pic_2") MultipartFile pic2) throws Exception {
+
    		logger.info("goodsEnrollPOST......" + menu);
    		
-   		pservice.menuEnroll(menu);
+   		pservice.menuEnroll(menu, pic1, pic2);
    		
    		rttr.addFlashAttribute("enroll_result", menu.getMenu());
    		
