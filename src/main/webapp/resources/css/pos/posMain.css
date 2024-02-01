@@ -120,6 +120,23 @@ ul{
     line-height: 80px;
     color: white;    
 }
+.order_status_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4칸으로 나눔 */
+    grid-gap: 20px; /* 그리드 아이템 사이의 간격 */
+    padding: 20px; /* 그리드 패딩 */
+}
+
+.order_status_item {
+    background-color: #f2f2f2; /* 아이템 배경색 */
+    color: #333; /* 텍스트 색상 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px; /* 높이 설정, 정사각형으로 만들기 위해서는 너비와 같게 설정 */
+    border-radius: 10px; /* 경계 둥글기 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
 
 
  

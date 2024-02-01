@@ -60,8 +60,24 @@
                 </div>
                 
                 <div class="admin_content_wrap">
-                    <div class="admin_content_subject"><span>판매 현황</span></div>
-                </div>
+    <div class="admin_content_subject"><span>판매 현황</span></div>
+    <div class="order_status_grid">
+    
+        <div class="order_status_item">테이블 1</div>
+        <div class="order_status_item">테이블 2</div>
+        <div class="order_status_item">테이블 3</div>
+        <div class="order_status_item">테이블 4</div>
+        <div class="order_status_item">테이블 5</div>
+        <div class="order_status_item">테이블 6</div>
+        <div class="order_status_item">테이블 7</div>
+        <div class="order_status_item">테이블 8</div>
+        <div class="order_status_item">테이블 9</div>
+        <div class="order_status_item">테이블 10</div>
+        <div class="order_status_item">테이블 11</div>
+        <div class="order_status_item">테이블 12</div>
+        
+    </div>
+</div>
                 <div class="clearfix"></div>
             </div>
             </div>
