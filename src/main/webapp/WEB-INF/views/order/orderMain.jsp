@@ -47,9 +47,9 @@
 						</li>
 						<lI><a class="order_list_03" href="/order/orderMain3">비어</a>
 						</lI>
-						<lI><a class="order_list_04" href="/order/orderMain4">음료</a>
+						<lI><a class="order_list_04" href="/order/orderMain4">안주</a>
 						</lI>
-						<lI><a class="order_list_05" href="/order/orderMain5">안주</a>
+						<lI><a class="order_list_05" href="/order/orderMain5">음료</a>
 						</lI>
 					</ul>
 				</div>

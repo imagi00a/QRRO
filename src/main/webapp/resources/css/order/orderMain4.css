@@ -120,7 +120,34 @@ ul{
     line-height: 80px;
     color: white;    
 }
+.order_menu_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4칸으로 나눔 */
+    grid-gap: 20px; /* 그리드 아이템 사이의 간격 */
+    padding: 20px; /* 그리드 패딩 */
+}
 
+.order_menu_item {
+    text-align: center; /* 중앙 정렬 */
+    margin-bottom: 20px; /* 아이템 간격 */
+}
+
+.order_menu_item img {
+    max-width: 100%; /* 이미지가 그리드 컨테이너를 초과하지 않도록 */
+    height: 71%; /* 이미지의 높이를 자동으로 조절 */
+    border-radius: 10px; /* 이미지 모서리 둥글게 */
+}
+
+.menu_name {
+    margin-top: 10px; /* 이미지와 메뉴 이름 사이 간격 */
+    font-size: 1.0em; /* 폰트 크기 */
+}
+
+.menu_price {
+    margin-top: 5px; /* 메뉴 이름과 가격 사이 간격 */
+    font-size: 1.4em; /* 폰트 크기 */
+    color: #555; /* 폰트 색상 */
+}
 
  
  

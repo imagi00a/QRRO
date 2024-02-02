@@ -97,8 +97,8 @@
 											<c:when test="${list.category == 1}">위스키</c:when>
 											<c:when test="${list.category == 2}">칵테일</c:when>
 											<c:when test="${list.category == 3}">맥주</c:when>
-											<c:when test="${list.category == 4}">음료</c:when>
-											<c:when test="${list.category == 5}">안주</c:when>
+											<c:when test="${list.category == 4}">안주</c:when>
+											<c:when test="${list.category == 5}">음료</c:when>
 											<c:otherwise>기타</c:otherwise>
 										</c:choose></td>
 									<td><c:out value="${list.menu}" /></td>

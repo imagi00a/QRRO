@@ -11,6 +11,34 @@
 
 	</select>
 	
+	<!-- 오더 메뉴2 목록 -->
+	<select id="getOrderView2" resultType="com.qrro.model.MenuVO">
+
+		select * from menu_info where category = 2
+
+	</select>
+	
+	<!-- 오더 메뉴3 목록 -->
+	<select id="getOrderView3" resultType="com.qrro.model.MenuVO">
+
+		select * from menu_info where category = 3
+
+	</select>
+	
+	<!-- 오더 메뉴1 목록 -->
+	<select id="getOrderView4" resultType="com.qrro.model.MenuVO">
+
+		select * from menu_info where category = 4
+
+	</select>
+	
+	<!-- 오더 메뉴1 목록 -->
+	<select id="getOrderView5" resultType="com.qrro.model.MenuVO">
+
+		select * from menu_info where category = 5
+
+	</select>
+	
 	<!-- 메뉴 상세 페이지 -->
 	<select id="getMenuDetail" resultType="com.qrro.model.MenuVO">
 	
