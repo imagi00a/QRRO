@@ -20,4 +20,10 @@ public class OrderServiceImpl implements OrderService {
 		return mapper.getOrderView1();
 	}
 
+	@Override
+	public MenuVO getMenuDetail(int seq) {
+		
+		return mapper.getMenuDetail(seq);
+	}
+
 }

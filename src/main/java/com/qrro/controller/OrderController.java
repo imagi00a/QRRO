@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -51,6 +52,15 @@ public class OrderController {
 		logger.info("오더메인 페이지 진입");
 	}
 	
+	//	상세 페이지 이동
+	@RequestMapping(value = "menuDetail", method = RequestMethod.GET)
+	public void menuDetailPageGET(int seq, Model model) {
+		
+		logger.info("menuDetailPageGET()..........");
+		
+		model.addAttribute("menuDetail", oservice.getMenuDetail(seq));
+				
+	}
    
 	
 }

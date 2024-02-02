@@ -1,0 +1,180 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+/* 화면 전체 렙 */
+.wrapper{
+    width: 100%;
+}
+/* content 랩 */
+.wrap{
+    width : 1080px;
+    margin: auto;
+}
+/* 홈페이지 기능 네비 */ 
+.top_gnb_area{
+    width: 100%;
+    height: 50px;
+    background-color: #f0f0f1;
+    position:relative;
+}
+.top_gnb_area .list{
+    position: absolute;
+    top: 0px;
+    right: 0;
+    
+}
+/* 로그인 성공 영역 */
+.login_success_area{
+    float : left;
+    padding: 13px 15px 0 10px;
+    font-weight: 900;
+}
+
+.top_gnb_area .list li{
+    list-style: none;    
+    float : right;
+    padding: 13px 15px 0 10px;
+    font-weight: 900;
+    cursor: pointer;
+}
+ 
+/* 관리자 페이지 상단 현페이지 정보 */
+.order_top_wrap{
+    height:110px;
+    line-height: 110px;
+    background-color: #333;
+    margin-bottom:15px;
+}
+.order_top_wrap>span{
+    margin-left: 30px;
+    display:inline-block;
+    color: white;
+    font-size: 50px;
+    font-weight: bolder;
+}
+/* 관리자 wrap(네비+컨텐츠) */
+.order_wrap{
+    
+    
+}
+ 
+/* 관리자페이지 네비 영역 */
+.order_navi_wrap{
+    width: 20%;
+    height: 300px;
+    float:left;
+    height: 100%;
+ 
+}
+.order_navi_wrap li{
+    display: block;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+}
+.order_navi_wrap li a{
+    display: block;
+    height: 100%;
+    width: 95%;
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+
+.order_navi_wrap li a:link {color: black;}
+.order_navi_wrap li a:visited {color: black;}
+.order_navi_wrap li a:active {color: black;}
+.order_navi_wrap li a:hover {color: black;}
+ 
+ /* 판매 현황 컨텐츠 선택영역 */
+
+ 
+/*  컨텐츠 영역 */
+.order_content_wrap{
+	display: flex; /* 플렉스 컨테이너 설정 */
+	justify-content: space-between; /* 자식 요소들 사이에 공간을 균등하게 배분 */
+    width: 80%;
+    float:left;
+    height: 100%;
+    height: 600px;
+    background-color: #333;
+    
+}
+.order_menu_item img, .order_menu_item2 img {
+    width: auto; /* 이미지의 원래 너비를 유지 */
+    height: auto; /* 이미지의 원래 높이를 유지 */
+    max-width: 100%; /* 컨테이너 너비를 초과하지 않도록 설정 */
+}
+
+/*  상세사진 영역 */
+.order_menu_item img {
+
+    max-height: 574px;
+    margin-top: 10px; /* 상단에서 5픽셀 떨어지도록 설정 */
+    margin-left: 10px; /* 왼쪽에서 5픽셀 떨어지도록 설정 */
+    border: 3px solid white; /* 테두리 설정 */
+    border-radius: 10px; /* 둥근 모서리 설정 */
+}
+
+/*  대표사진 영역 */
+.order_menu_item2 img {
+
+    max-height: 200px;
+    margin-top: 20px; /* 상단에서 5픽셀 떨어지도록 설정 */
+    margin-left: auto; /* 왼쪽 요소와의 공간을 최대로 하여 오른쪽 정렬 효과 */
+    margin-right: 20px; /* 우측에서 10px 떨어지도록 설정 */
+    border: 3px solid white; /* 테두리 설정 */
+    border-radius: 10px; /* 둥근 모서리 설정 */
+}
+.order_menu_item2 {
+    margin-right: 10px; /* 오른쪽에서 10px 떨어진 곳에 위치 */
+    text-align: right; /* 텍스트를 오른쪽 정렬 */
+}
+
+.menu_name {
+    display: block; /* 텍스트를 블록 요소로 만들어 새 줄에 배치 */
+    font-size: 17px;
+    color: white;
+    font-weight: bolder;
+    margin-right: 21px;
+}
+ .menu_price {
+    display: block; /* 텍스트를 블록 요소로 만들어 새 줄에 배치 */
+    font-size: 34px;
+    color: white;
+    font-weight: bolder;
+    margin-right: 21px;
+}
+.add-to-cart {
+    display: block; /* 버튼을 블록 요소로 만들어 새 줄에 배치 */
+    margin-top: 20px; /* 버튼과 가격 정보 사이의 간격 */
+    padding: 8px 85px; /* 버튼 내부의 패딩 */
+    background-color: f8f8f8; /* 버튼의 배경색 */
+    color: black; /* 버튼의 글자색 */
+    font-size: 18px;
+    border: none; /* 테두리 제거 */
+    cursor: pointer; /* 마우스 오버 시 커서 변경 */
+    border-radius: 5px; /* 버튼의 모서리를 둥글게 */
+    font-weight: bolder;
+    transition: background-color 0.3s;
+}
+.add-to-cart:hover {
+    background-color: #c0c0c0; /* 호버 효과를 위한 약간 더 밝은 검은색 */
+    cursor: pointer;
+}
+ 
+ 
+/* float 속성 해제 */
+.clearfix{
+    clear: both;
+}

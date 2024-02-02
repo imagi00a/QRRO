@@ -11,4 +11,11 @@
 
 	</select>
 	
+	<!-- 메뉴 상세 페이지 -->
+	<select id="getMenuDetail" resultType="com.qrro.model.MenuVO">
+	
+			select * from menu_info where seq = #{seq}
+	
+	</select>
+	
 </mapper>

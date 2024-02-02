@@ -8,7 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>ORDER MAIN</title>
-<link rel="stylesheet" href="../resources/css/order/orderMain.css">
+<link rel="stylesheet" href="../resources/css/order/menuDetail.css">
 
 <script src="https://code.jquery.com/jquery-3.4.1.js"
 	integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -55,46 +55,24 @@
 				</div>
 
 				<div class="order_content_wrap">
-					<div class="order_content_subject">
-						<span>WHISKY</span>
-					</div>
-					<div class="order_menu_grid">
-						<c:forEach items="${orderMain}" var="list">
-							<div class="order_menu_item">
-								<a class="move" href='<c:out value="${list.seq}"/>'> <img
-									src="<c:url value='/resources/upload/${list.npic_1}'/>"
-									alt="${list.menu}" />
-								</a>
-								<div class="menu_name">
-									<c:out value="${list.menu}" />
-								</div>
-								<div class="menu_price">
-									<fmt:formatNumber value="${list.price}" type="number"
-										groupingUsed="true" pattern="#,##0" />
-								</div>
-							</div>
-						</c:forEach>
-					</div>
-				</div>
+    <div class="order_menu_item">
+        <img src="<c:url value='/resources/upload/${menuDetail.npic_2}'/>" alt="${menuDetail.menu}" />
+    </div>
+    <div class="order_menu_item2">
+       <img src="<c:url value='/resources/upload/${menuDetail.npic_1}'/>" alt="${menuDetail.menu}" />
+        <div class="menu_name">
+            <br><c:out value="${menuDetail.menu}" />
+        </div>
+        <div class="menu_price">
+            <br> ￦ <fmt:formatNumber value="${menuDetail.price}" type="number" groupingUsed="true" pattern="#,##0" />
+        </div>
+        <button type="button" class="add-to-cart">담기</button> 
+    </div>
+</div>
 				<div class="clearfix"></div>
 			</div>
 		</div>
-		<form id="moveForm" method="get"></form>
 	</div>
 
 </body>
-
-<script>
-
-let moveForm = $("#moveForm");
- 
-$(".move").on("click", function(e){
-	e.preventDefault();
-	moveForm.empty();
-
-	moveForm.append("<input type='hidden' name='seq' value='"+ $(this).attr("href")+ "'>");
-	moveForm.attr("action", "/order/menuDetail");
-	moveForm.submit();
-	});
-</script>
 </html>
